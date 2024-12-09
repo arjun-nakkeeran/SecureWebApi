@@ -1,4 +1,4 @@
-namespace MyMicroservice;
+namespace MyMicroservice.Models;
 
 public class WeatherForecast
 {
