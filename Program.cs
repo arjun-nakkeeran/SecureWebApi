@@ -1,40 +1,15 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Logging;
-using Microsoft.IdentityModel.Tokens;
 using MyMicroservice.Data;
 using MyMicroservice.Security;
+using MyMicroservice.Services;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var config = builder.Configuration;
-
-// Add services to the container.
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.Audience = config["Jwt:Audience"];
-        options.Authority = config["Jwt:Issuer"];
-        options.RequireHttpsMetadata = false;
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = config["Jwt:Issuer"],
-            ValidAudience = config["Jwt:Audience"],
-            //IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"])),
-        };
-    });
-
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy(SecurityConstants.EditPolicy, policy => policy.RequireClaim("scope", SecurityConstants.EditScope));
-    options.AddPolicy(SecurityConstants.DeletePolicy, policy => policy.RequireClaim("scope", SecurityConstants.DeleteScope));
-});
+var auth = new JwtAuthenticationService(builder.Configuration);
+auth.ConfigureAuthentication(builder.Services);
+auth.ConfigureAuthorization(builder.Services);
 
 builder.Services.AddAuthorization();
 builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, SwaggerOptions>();
@@ -44,8 +19,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ProductsDBContext>((s) => new ProductsDBContext());
+builder.Services.AddDbContext<ParkingLotDBContext>();
+builder.Services.AddScoped<ParkingLotInitializer>();
+builder.Services.AddScoped<IParkingLotService, ParkingLotService>();
+builder.Services.AddScoped<IVehicleRegisterService, VehicleRegisterService>();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    await scope.ServiceProvider.GetRequiredService<ParkingLotInitializer>().SeedData();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -65,6 +49,5 @@ app.Use(async (context, next) =>
     Console.WriteLine("Hello from Middleware:/");
     await next.Invoke();
 });
-
 
 app.Run();
