@@ -21,6 +21,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ProductsDBContext>((s) => new ProductsDBContext());
 builder.Services.AddDbContext<ParkingLotDBContext>();
 builder.Services.AddScoped<ParkingLotInitializer>();
+builder.Services.AddScoped<IParkingLotService, ParkingLotService>();
+builder.Services.AddScoped<IVehicleRegisterService, VehicleRegisterService>();
 
 var app = builder.Build();
 
