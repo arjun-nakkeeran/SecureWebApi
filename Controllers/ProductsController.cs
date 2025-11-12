@@ -105,6 +105,7 @@ namespace MyMicroservice.Controllers
 
         // DELETE: api/Products/5
         [HttpDelete("{id}")]
+        [Authorize(SecurityConstants.DeletePolicy)]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             if (_context.Products == null)
