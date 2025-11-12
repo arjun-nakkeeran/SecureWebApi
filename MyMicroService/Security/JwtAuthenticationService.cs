@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using MyMicroservice.Security;
 
@@ -36,8 +35,8 @@ public class JwtAuthenticationService
     {
         services.AddAuthorization(options =>
         {
-            options.AddPolicy(SecurityConstants.EditPolicy, policy => policy.RequireClaim("scope", SecurityConstants.EditScope));
-            options.AddPolicy(SecurityConstants.DeletePolicy, policy => policy.RequireClaim("scope", SecurityConstants.DeleteScope));
+            options.AddPolicy(SecurityConstants.EditPolicy, policyBuilder => policyBuilder.RequireClaim("scope", SecurityConstants.EditScope));
+            options.AddPolicy(SecurityConstants.DeletePolicy, policyBuilder => policyBuilder.RequireClaim("scope", SecurityConstants.DeleteScope));
         });
     }
 }

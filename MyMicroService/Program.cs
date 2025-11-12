@@ -12,7 +12,7 @@ auth.ConfigureAuthentication(builder.Services);
 auth.ConfigureAuthorization(builder.Services);
 
 builder.Services.AddAuthorization();
-builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, SwaggerOptions>();
+builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, SecureSwaggenGenOption>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -4,7 +4,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace MyMicroservice.Security
 {
-    public class SwaggerOptions : IConfigureOptions<SwaggerGenOptions>
+    public class SecureSwaggenGenOption : IConfigureOptions<SwaggerGenOptions>
     {
         public void Configure(SwaggerGenOptions options)
         {
