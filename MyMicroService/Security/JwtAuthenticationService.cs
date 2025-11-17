@@ -27,6 +27,7 @@ public class JwtAuthenticationService
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = _configuration["Jwt:Issuer"],
                     ValidAudience = _configuration["Jwt:Audience"],
+                    //IssuerSigningKey = Todo: Add logic to retrieve and set the signing key if necessary
                 };
             });
     }

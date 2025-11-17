@@ -5,6 +5,14 @@ VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMicroservice", "MyMicroService\MyMicroservice.csproj", "{88092040-DF2D-4519-9C52-F80C3E4C4CEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{BAE99E21-C44A-4FBA-8DAC-1CF1ADC149EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{751CE2FC-7D5E-4B95-A1EC-6F9C0A846E87}"
+	ProjectSection(SolutionItems) = preProject
+		OrdersApi.http = OrdersApi.http
+		ParkingLot.http = ParkingLot.http
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,10 @@ Global
 		{88092040-DF2D-4519-9C52-F80C3E4C4CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88092040-DF2D-4519-9C52-F80C3E4C4CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88092040-DF2D-4519-9C52-F80C3E4C4CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE99E21-C44A-4FBA-8DAC-1CF1ADC149EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE99E21-C44A-4FBA-8DAC-1CF1ADC149EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE99E21-C44A-4FBA-8DAC-1CF1ADC149EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE99E21-C44A-4FBA-8DAC-1CF1ADC149EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

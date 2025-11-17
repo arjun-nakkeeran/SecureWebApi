@@ -4,6 +4,7 @@ using MyMicroservice.Data;
 using MyMicroservice.Security;
 using MyMicroservice.Services;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,12 @@ builder.Services.AddDbContext<ParkingLotDBContext>();
 builder.Services.AddScoped<ParkingLotInitializer>();
 builder.Services.AddScoped<IParkingLotService, ParkingLotService>();
 builder.Services.AddScoped<IVehicleRegisterService, VehicleRegisterService>();
+builder.Services.AddMediatRServices();
+
+builder.Services.AddCors(options => {
+    options.AddDefaultPolicy(policy => policy
+        .WithOrigins("http://localhost:44471"));
+});
 
 var app = builder.Build();
 
@@ -39,6 +46,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     IdentityModelEventSource.ShowPII = true;
 }
+
+app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -46,7 +55,7 @@ app.MapControllers();
 
 app.Use(async (context, next) =>
 {
-    Console.WriteLine("Hello from Middleware:/");
+    Console.WriteLine("Endpoint: {0}", context.GetEndpoint()?.DisplayName);
     await next.Invoke();
 });
 
