@@ -1,0 +1,32 @@
+
+@hostAddress = http://localhost:5262
+
+GET {{hostAddress}}/api/orders
+###
+
+POST {{hostAddress}}/api/orders
+Content-Type: Application/json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "customerName": "Alice",
+  "items": [
+    "Eggs", "Breads", "Chillies"
+  ],
+  "status": "New"
+}
+###
+
+GET {{hostAddress}}/api/orders/99359140-fe19-4047-8f85-ed8cc237b406
+###
+
+PUT {{hostAddress}}/api/orders/99359140-fe19-4047-8f85-ed8cc237b406
+Content-Type: Application/json
+{
+  "id": "99359140-fe19-4047-8f85-ed8cc237b406",
+  "customerName": "Alice-8596",
+  "items": [
+    "Eggs", "Breads", "Chillies", "Onions"
+  ],
+  "status": "New"
+}
+###

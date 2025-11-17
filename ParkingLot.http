@@ -1,0 +1,10 @@
+
+@hostAddress = http://localhost:5262
+
+GET {{hostAddress}}/api/ParkingLot
+###
+
+OPTIONS {{hostAddress}}/api/ParkingLot
+###
+
+HEAD {{hostAddress}}/api/ParkingLot
