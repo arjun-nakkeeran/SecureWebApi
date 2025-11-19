@@ -3,8 +3,6 @@ using DataAccess.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace MyMicroservice.Controllers
 {
     [Route("api/[controller]")]
@@ -23,11 +21,6 @@ namespace MyMicroservice.Controllers
         public async Task<ActionResult<IEnumerable<Order>>> Get()
         {
             var orders = await _mediator.Send(new GetOrdersQuery());
-            //var orders = new List<Order>
-            //{
-            //    new() { Id = Guid.NewGuid(), CustomerName = "Alice", Items = new List<string> { "Item1", "Item2" }, Status = "Pending" },
-            //    new() { Id = Guid.NewGuid(), CustomerName = "Bob", Items = new List<string> { "Item3" }, Status = "Shipped" }
-            //};
             return Ok(orders);
         }
 
@@ -36,7 +29,6 @@ namespace MyMicroservice.Controllers
         public async Task<ActionResult<Order>> Get(Guid id)
         {
             var orders = await _mediator.Send(new GetOrdersQuery() {  OrderId = id});
-            //var order = new Order { Id = id, CustomerName = "Alice", Items = new List<string> { "Item1", "Item2" }, Status = "Pending" };
             return Ok(orders.LastOrDefault());
         }
 
