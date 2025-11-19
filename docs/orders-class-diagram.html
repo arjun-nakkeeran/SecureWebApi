@@ -1,0 +1,697 @@
+<head class="selectNone"><style type="text/css" id="pluginCss">:root {
+  --plugin-contextmenu-icon-checkbox: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACnSURBVDhPzZPBDYMwDEUNQ2QeWCAn6JmOA2dYonDKAmWeXDMA1TeWAAXFlF76JGQTKf85iGQhhIV+gAOstfL6Hc45yqW/zWGCaRq5alRVzfXyBN573jT0g6xsXAoYX+tk9WM171EDYH/PM5VFQcYYWd1QA1J2EAV0bcfnhVmzgyigeTZcYdbsIAqACUaYNTs4/QZ7Y8oOTgNgxE+FJ2UHf3IXpL8B0Qe0W09Ua0XwsAAAAABJRU5ErkJggg==);
+  --plugin-default-grayscale-bias-opacity: 0.25;
+  --plugin-font-family: "Segoe UI";
+  --plugin-font-size: 7.2pt;
+  --plugin-font-weight: normal;
+  --plugin-color: #000000E4;
+  --plugin-contextmenu-active-color: #F3F3F3C2;
+  --plugin-contextmenu-background-color: #F3F3F3FF;
+  --plugin-contextmenu-border-color: #0000000F;
+  --plugin-contextmenu-color: #000000E4;
+  --plugin-contextmenu-hover-color: #0000000F;
+  --plugin-contextmenu-hover-text-color: #000000E4;
+  --plugin-contextmenu-hover-border-color: #0000000F;
+  --plugin-contextmenu-inactive-text-color: #0000005C;
+  --plugin-contextmenu-separator-color: #00000014;
+  --plugin-background-color: #F3F3F3FF;
+  --plugin-error-border-color: #C42B1CFF;
+  --plugin-inactive-color: #0000005C;
+  --plugin-link-color: #003E92FF;
+  --plugin-link-hover-color: #001A68FF;
+  --plugin-link-active-color: #001A68FF;
+  --plugin-table-header-color: #000000E4;
+  --plugin-table-header-background-color: #EEEEEEFF;
+  --plugin-table-border-color: #00000014;
+  --plugin-highlight-color: #FFFFFFFF;
+  --plugin-highlight-background-color: #715C1DFF;
+  --plugin-scrollbar-arrow-background-color: #FFFFFFB2;
+  --plugin-scrollbar-arrow-background-active-color: #F9F9F980;
+  --plugin-scrollbar-arrow-background-hover-color: #F9F9F980;
+  --plugin-scrollbar-arrow-color: #00000072;
+  --plugin-scrollbar-arrow-active-color: #00000072;
+  --plugin-scrollbar-arrow-hover-color: #00000072;
+  --plugin-scrollbar-background-color: #FFFFFF00;
+  --plugin-scrollbar-background-hover-color: #FFFFFF80;
+  --plugin-scrollbar-face-color: #00000072;
+  --plugin-scrollbar-face-active-color: #00000072;
+  --plugin-scrollbar-face-hover-color: #00000072;
+  --plugin-select-option-background-color: #F3F3F3FF;
+  --plugin-select-option-color: #000000E4;
+  --plugin-select-option-checked-background-color: #715C1DFF;
+  --plugin-select-option-checked-border-color: #715C1DFF;
+  --plugin-select-option-checked-foreground-color: #FFFFFFFF;
+  --plugin-select-option-hover-background-color: #0000000F;
+  --plugin-select-option-hover-border-color: #0000000F;
+  --plugin-select-option-hover-foreground-color: #000000E4;
+  --plugin-select-border-color: #0000000F;
+  --plugin-select-background-color: #FFFFFFB2;
+  --plugin-select-foreground-color: #000000E4;
+  --plugin-select-hover-border-color: #0000000F;
+  --plugin-select-hover-background-color: #F9F9F980;
+  --plugin-select-hover-foreground-color: #000000E4;
+  --plugin-textbox-border-color: #0000000F;
+  --plugin-textbox-background-color: #FFFFFFB2;
+  --plugin-textbox-color: #000000E4;
+  --plugin-textbox-disabled-background-color: #F9F9F94D;
+  --plugin-textbox-disabled-border-color: #0000000F;
+  --plugin-textbox-disabled-color: #0000005C;
+  --plugin-tooltip-text-color: #000000E4;
+  --plugin-tooltip-background-color: #F3F3F3FF;
+  --plugin-tooltip-border-color: #0000000F;
+  --plugin-treeview-content-inactive-selected-background-color: #0000000F;
+  --plugin-treeview-content-inactive-selected-color: #000000B2;
+  --plugin-treeview-content-selected-background-color: #715C1DFF;
+  --plugin-treeview-content-selected-color: #FFFFFFFF;
+  --plugin-treeview-content-selected-border-color: #715C1DFF;
+  --plugin-treeview-content-background-color: #F3F3F3FF;
+  --plugin-treeview-content-color: #000000E4;
+  --plugin-treeview-content-mouseover-background-color: #0000000F;
+  --plugin-treeview-content-mouseover-color: #000000E4;
+  --plugin-scrollbar-up-arrow-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1.95693 5.9989C1.14924 5.9989 0.674785 5.09087 1.13603 4.42784L3.76866 0.64342C4.36545 -0.214452 5.6346 -0.214448 6.23138 0.643422L8.86402 4.42784C9.32526 5.09087 8.8508 5.9989 8.04311 5.9989H1.95693Z' fill='%2300000072' /%3E%3C/svg%3E");
+  --plugin-scrollbar-up-arrow-active-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1.95693 5.9989C1.14924 5.9989 0.674785 5.09087 1.13603 4.42784L3.76866 0.64342C4.36545 -0.214452 5.6346 -0.214448 6.23138 0.643422L8.86402 4.42784C9.32526 5.09087 8.8508 5.9989 8.04311 5.9989H1.95693Z' fill='%23000000E4' /%3E%3C/svg%3E");
+  --plugin-scrollbar-up-arrow-hover-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1.95693 5.9989C1.14924 5.9989 0.674785 5.09087 1.13603 4.42784L3.76866 0.64342C4.36545 -0.214452 5.6346 -0.214448 6.23138 0.643422L8.86402 4.42784C9.32526 5.09087 8.8508 5.9989 8.04311 5.9989H1.95693Z' fill='%23000000E4' /%3E%3C/svg%3E");
+  --plugin-scrollbar-down-arrow-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1.95693 0C1.14924 0 0.674785 0.90803 1.13603 1.57107L3.76866 5.35548C4.36545 6.21335 5.6346 6.21335 6.23138 5.35548L8.86402 1.57106C9.32526 0.908027 8.8508 0 8.04311 0H1.95693Z' fill='%2300000072' /%3E%3C/svg%3E");
+  --plugin-scrollbar-down-arrow-active-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1.95693 0C1.14924 0 0.674785 0.90803 1.13603 1.57107L3.76866 5.35548C4.36545 6.21335 5.6346 6.21335 6.23138 5.35548L8.86402 1.57106C9.32526 0.908027 8.8508 0 8.04311 0H1.95693Z' fill='%23000000E4' /%3E%3C/svg%3E");
+  --plugin-scrollbar-down-arrow-hover-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1.95693 0C1.14924 0 0.674785 0.90803 1.13603 1.57107L3.76866 5.35548C4.36545 6.21335 5.6346 6.21335 6.23138 5.35548L8.86402 1.57106C9.32526 0.908027 8.8508 0 8.04311 0H1.95693Z' fill='%23000000E4' /%3E%3C/svg%3E");
+  --plugin-scrollbar-left-arrow-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'%3E%3Cpath d='M4.42784 8.8403C5.09087 9.29871 5.9989 8.82717 5.9989 8.02443V1.9756C5.9989 1.17287 5.09087 0.701325 4.42784 1.15974L0.643422 3.77622C-0.214448 4.36933 -0.214452 5.6307 0.64342 6.22382L4.42784 8.8403Z' fill='%2300000072' /%3E%3C/svg%3E");
+  --plugin-scrollbar-left-arrow-active-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'%3E%3Cpath d='M4.42784 8.8403C5.09087 9.29871 5.9989 8.82717 5.9989 8.02443V1.9756C5.9989 1.17287 5.09087 0.701325 4.42784 1.15974L0.643422 3.77622C-0.214448 4.36933 -0.214452 5.6307 0.64342 6.22382L4.42784 8.8403Z' fill='%23000000E4' /%3E%3C/svg%3E");
+  --plugin-scrollbar-left-arrow-hover-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'%3E%3Cpath d='M4.42784 8.8403C5.09087 9.29871 5.9989 8.82717 5.9989 8.02443V1.9756C5.9989 1.17287 5.09087 0.701325 4.42784 1.15974L0.643422 3.77622C-0.214448 4.36933 -0.214452 5.6307 0.64342 6.22382L4.42784 8.8403Z' fill='%23000000E4' /%3E%3C/svg%3E");
+  --plugin-scrollbar-right-arrow-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'%3E%3Cpath d='M1.57107 8.8403C0.90803 9.29871 0 8.82717 0 8.02443L0 1.9756C0 1.17287 0.908028 0.701325 1.57106 1.15974L5.35548 3.77622C6.21335 4.36933 6.21335 5.6307 5.35548 6.22382L1.57107 8.8403Z' fill='%2300000072' /%3E%3C/svg%3E");
+  --plugin-scrollbar-right-arrow-active-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'%3E%3Cpath d='M1.57107 8.8403C0.90803 9.29871 0 8.82717 0 8.02443L0 1.9756C0 1.17287 0.908028 0.701325 1.57106 1.15974L5.35548 3.77622C6.21335 4.36933 6.21335 5.6307 5.35548 6.22382L1.57107 8.8403Z' fill='%23000000E4' /%3E%3C/svg%3E");
+  --plugin-scrollbar-right-arrow-hover-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'%3E%3Cpath d='M1.57107 8.8403C0.90803 9.29871 0 8.82717 0 8.02443L0 1.9756C0 1.17287 0.908028 0.701325 1.57106 1.15974L5.35548 3.77622C6.21335 4.36933 6.21335 5.6307 5.35548 6.22382L1.57107 8.8403Z' fill='%23000000E4' /%3E%3C/svg%3E");
+  --plugin-corner-radius-none: 0;
+  --plugin-corner-radius-s: 2;
+  --plugin-corner-radius-m: 4;
+  --plugin-corner-radius-l: 6;
+  --plugin-corner-radius-xl: 8;
+  --plugin-corner-radius-focus-rect: 6;
+  --plugin-spacing-none: 0;
+  --plugin-spacing-xxxs: 1;
+  --plugin-spacing-xxs: 2;
+  --plugin-spacing-xs-nudge: 3;
+  --plugin-spacing-xs: 4;
+  --plugin-spacing-s-nudge: 6;
+  --plugin-spacing-s: 8;
+  --plugin-spacing-m-nudge: 10;
+  --plugin-spacing-m: 12;
+  --plugin-spacing-l: 16;
+  --plugin-spacing-xl: 20;
+  --plugin-spacing-xxl: 24;
+  --plugin-spacing-xxxl: 32;
+  --plugin-size-content-min-height: 16;
+  --plugin-size-content-min-width: 16;
+  --plugin-size-control-min-height: 24;
+  --plugin-size-control-min-width: 24;
+  --plugin-size-toggle-switch-size: 20;
+  --plugin-size-icon-xxs: 8;
+  --plugin-size-icon-xs: 12;
+  --plugin-size-icon-s: 16;
+  --plugin-size-icon-m: 24;
+  --plugin-size-icon-l: 32;
+  --plugin-size-non-client-control-height: 30;
+  --plugin-size-non-client-control-width: 44;
+  --plugin-stroke-width-none: 0;
+  --plugin-stroke-width-thin: 1;
+  --plugin-stroke-width-thick: 2;
+  --plugin-stroke-width-thicker: 3;
+  --plugin-stroke-width-thickest: 4;
+  --plugin-typography-body-line-height: 20;
+  --plugin-typography-body-large-line-height: 24;
+  --plugin-typography-caption-line-height: 16;
+  --plugin-typography-code-line-height: 20;
+  --plugin-typography-display-line-height: 92;
+  --plugin-typography-subtitle-line-height: 28;
+  --plugin-typography-title-line-height: 36;
+  --plugin-typography-title-large-line-height: 52;
+}
+
+/* CSS file for the plugin's base styles and themes (light / dark / high contrast)
+   Light theme values are used as defaults but CSS variables are used to provide the correct value for the active theme.
+    Example:
+    border-right: 1px solid var(--plugin-background-color, #8591A2);
+
+   The following CSS variables are available to all hosts:
+    --plugin-background-color
+    --plugin-color
+    --plugin-contextmenu-active-color
+    --plugin-contextmenu-background-color
+    --plugin-contextmenu-border-color
+    --plugin-contextmenu-color
+    --plugin-contextmenu-hover-color
+    --plugin-contextmenu-hover-text-color
+    --plugin-contextmenu-icon-checkbox
+    --plugin-contextmenu-inactive-text-color
+    --plugin-contextmenu-separator-color
+    --plugin-error-border-color
+    --plugin-font-family
+    --plugin-font-size
+    --plugin-font-weight
+    --plugin-highlight-background-color
+    --plugin-highlight-color
+    --plugin-inactive-color
+    --plugin-link-color
+    --plugin-link-active-color
+    --plugin-link-hover-color
+    --plugin-scrollbar-arrow-background-color
+    --plugin-scrollbar-arrow-background-active-color
+    --plugin-scrollbar-arrow-background-hover-color
+    --plugin-scrollbar-arrow-color
+    --plugin-scrollbar-arrow-active-color
+    --plugin-scrollbar-arrow-hover-color
+    --plugin-scrollbar-background-color
+    --plugin-scrollbar-face-color
+    --plugin-scrollbar-face-active-color
+    --plugin-scrollbar-face-hover-color
+    --plugin-select-option-background-color
+    --plugin-select-option-color
+    --plugin-select-option-checked-background-color
+    --plugin-select-option-checked-border-color
+    --plugin-select-option-checked-foreground-color
+    --plugin-select-option-hover-background-color
+    --plugin-select-option-hover-border-color
+    --plugin-select-option-hover-foreground-color
+    --plugin-select-border-color
+    --plugin-select-background-color
+    --plugin-select-foreground-color
+    --plugin-select-hover-background-color
+    --plugin-select-hover-border-color
+    --plugin-select-hover-foreground-color
+    --plugin-table-border-color
+    --plugin-table-header-background-color
+    --plugin-table-header-color
+    --plugin-textbox-border-color
+    --plugin-textbox-background-color
+    --plugin-textbox-color
+    --plugin-textbox-disabled-background-color
+    --plugin-textbox-disabled-border-color
+    --plugin-textbox-disabled-color
+    --plugin-treeview-content-background-color
+    --plugin-treeview-content-color
+    --plugin-treeview-content-inactive-selected-color
+    --plugin-treeview-content-mouseover-background-color
+    --plugin-treeview-content-mouseover-color
+    --plugin-treeview-content-inactive-selected-color
+    --plugin-treeview-content-selected-background-color
+    --plugin-treeview-content-selected-border-color
+    --plugin-treeview-content-selected-color
+
+    The following are special values used just for theming scrollbar arrows (they contain a data URL defining an SVG):
+    --plugin-scrollbar-up-arrow-url
+    --plugin-scrollbar-up-arrow-hover-url
+    --plugin-scrollbar-up-arrow-active-url
+    --plugin-scrollbar-down-arrow-url
+    --plugin-scrollbar-down-arrow-hover-url
+    --plugin-scrollbar-down-arrow-active-url
+    --plugin-scrollbar-left-arrow-url
+    --plugin-scrollbar-left-arrow-hover-url
+    --plugin-scrollbar-left-arrow-active-url
+    --plugin-scrollbar-right-arrow-url
+    --plugin-scrollbar-right-arrow-hover-url
+    --plugin-scrollbar-right-arrow-active-url
+
+
+    VS host also has access to all VS themed color key tokens (EnvironmentColors) and category specific tokens.
+    http://msdn.microsoft.com/en-us/library/microsoft.visualstudio.platformui.environmentcolors_properties
+    Please see product documentation for instructions on how to add these tokens to the plugin manifest.
+ */
+
+/* HTML and body styles */
+html, body {
+    font-family: var(--plugin-font-family, "Segoe UI", Arial, sans-serif);
+    font-size: var(--plugin-font-size, 9pt);
+    font-weight: var(--plugin-font-weight, normal);
+    color: var(--plugin-color, #1E1E1E);
+    background-color: var(--plugin-background-color, #F6F6F6);
+}
+
+/* Scroll bars */
+
+::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+}
+
+/* Hover over the scrollbar */
+::-webkit-scrollbar:hover {
+    background-color: var(--plugin-scrollbar-background-hover-color, #C8C8C833) /* track hover color */
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar:hover::-webkit-scrollbar-corner {
+    background-color: var(--plugin-scrollbar-background-hover-color, #C8C8C833) /* match track hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+    background-color: var(--plugin-scrollbar-face-color, #6E6E6E);
+    border: 8px solid transparent; /* make the thumb appears smaller */
+    background-clip: padding-box;
+    border-radius: 9px; /* half of the thickness */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: 5px solid transparent; /* make the thumb appears larger */
+}
+
+/* Arrows */
+
+::-webkit-scrollbar-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Up arrow */
+
+::-webkit-scrollbar-button:start:decrement:vertical {
+    background-image: var(--plugin-scrollbar-up-arrow-url);
+    background-size: 10px 6px;  /* match the SVG intrinsic size */
+}
+
+::-webkit-scrollbar-button:start:decrement:vertical:hover {
+    background-image: var(--plugin-scrollbar-up-arrow-hover-url);
+    background-size: 10px 6px;  /* match the SVG intrinsic size */
+}
+
+::-webkit-scrollbar-button:start:decrement:vertical:active {
+    background-image: var(--plugin-scrollbar-up-arrow-active-url);
+    background-size: 10px 6px;  /* match the SVG intrinsic size */
+}
+
+/* Down arrow */
+
+::-webkit-scrollbar-button:end:increment:vertical {
+    background-image: var(--plugin-scrollbar-down-arrow-url);
+    background-size: 10px 6px;  /* match the SVG intrinsic size */
+}
+
+::-webkit-scrollbar-button:end:increment:vertical:hover {
+    background-image: var(--plugin-scrollbar-down-arrow-hover-url);
+    background-size: 10px 6px;  /* match the SVG intrinsic size */
+}
+
+::-webkit-scrollbar-button:end:increment:vertical:active {
+    background-image: var(--plugin-scrollbar-down-arrow-active-url);
+    background-size: 10px 6px;  /* match the SVG intrinsic size */
+}
+
+/* Left arrow */
+
+::-webkit-scrollbar-button:start:decrement:horizontal {
+    background-image: var(--plugin-scrollbar-left-arrow-url);
+    background-size: 6px 10px;  /* match the SVG intrinsic size */
+}
+
+::-webkit-scrollbar-button:start:decrement:horizontal:hover {
+    background-image: var(--plugin-scrollbar-left-arrow-hover-url);
+    background-size: 6px 10px;  /* match the SVG intrinsic size */
+}
+
+::-webkit-scrollbar-button:start:decrement:horizontal:active {
+    background-image: var(--plugin-scrollbar-left-arrow-active-url);
+    background-size: 6px 10px;  /* match the SVG intrinsic size */
+}
+
+/* Right arrow */
+
+::-webkit-scrollbar-button:end:increment:horizontal {
+    background-image: var(--plugin-scrollbar-right-arrow-url);
+    background-size: 6px 10px;  /* match the SVG intrinsic size */
+}
+
+::-webkit-scrollbar-button:end:increment:horizontal:hover {
+    background-image: var(--plugin-scrollbar-right-arrow-hover-url);
+    background-size: 6px 10px;  /* match the SVG intrinsic size */
+}
+
+::-webkit-scrollbar-button:end:increment:horizontal:active {
+    background-image: var(--plugin-scrollbar-right-arrow-active-url);
+    background-size: 6px 10px;  /* match the SVG intrinsic size */
+}
+
+/* Select styles */
+select {
+    color: var(--plugin-select-foreground-color, #1E1E1E);
+    background-color: var(--plugin-select-background-color, #FFFFFF);
+    font: var(--plugin-font-weight, normal) var(--plugin-font-size, 9pt) var(--plugin-font-family, "'Segoe UI', Arial, sans-serif");
+    border: 1px solid var(--plugin-select-border-color, #CCCEDB);
+}
+
+select:hover {
+    color: var(--plugin-select-hover-foreground-color, #1E1E1E);
+    background-color: var(--plugin-select-hover-background-color, #FFFFFF);
+    border: 1px solid var(--plugin-select-hover-border-color, #007ACC);
+}
+
+select[multiple],
+select option {
+    color: var(--plugin-select-option-color, #1E1E1E);
+    background-color: var(--plugin-select-option-background-color, #F6F6F6);
+    /* Add a transparent border so that text does not move around on hover */
+    border: 1px solid transparent;
+}
+
+select option:hover {
+    color: var(--plugin-select-option-hover-foreground-color, #1E1E1E);
+    background-color: var(--plugin-select-option-hover-background-color, #C9DEF5);
+    border: 1px solid var(--plugin-select-option-hover-border-color, #C9DEF5);
+}
+
+select option:checked {
+    color: var(--plugin-select-option-checked-foreground-color, #1E1E1E);
+    background-color: var(--plugin-select-option-checked-background-color, #C9DEF5);
+    border: 1px solid var(--plugin-select-option-checked-border-color, #C9DEF5);
+}
+
+/* Input styles */
+input {
+    font: var(--plugin-font-weight, normal) var(--plugin-font-size, 9pt) var(--plugin-font-family, "'Segoe UI', Arial, sans-serif");
+    color: var(--plugin-textbox-color, #1E1E1E);
+    background-color: var(--plugin-textbox-background-color, #FFFFFF);
+    border: 1px solid var(--plugin-textbox-border-color, #DBDDE6);
+    padding: 0 3px;
+}
+
+input:disabled {
+    color: var(--plugin-textbox-disabled-color, #A2A4A5);
+    background-color: var(--plugin-textbox-disabled-background-color, #FFFFFF);
+    border: 1px solid var(--plugin-textbox-disabled-border-color, #DBDDE6);
+}
+
+input[type="checkbox"],
+input[type="radio"]
+ {
+    border: none;
+    background-color: inherit;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+input[type="file"],
+input[type="image"]
+ {
+    border: none;
+    background-color: inherit;
+    padding: 0;
+}
+
+/* TextArea styles */
+textarea {
+    font-family: var(--plugin-font-family, "Segoe UI"), Arial, sans-serif;
+    font-size: var(--plugin-font-size, 9pt);
+    font-weight: var(--plugin-font-weight, normal);
+    color: var(--plugin-color, #1E1E1E);
+    background-color: var(--plugin-textbox-background-color, #F6F6F6);
+    border: 1px solid var(--plugin-textbox-border-color, #DBDDE6);
+    padding: 0 3px;
+    resize: none;
+}
+
+/* Button styles */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    color: #000000;
+    background-image: -ms-linear-gradient(top, #F0F0F0 0%, #E5E5E5 100%);
+    border: 1px solid #ACACAC;
+    font-family: var(--plugin-font-family, "Segoe UI"), Arial, sans-serif;
+    font-size: var(--plugin-font-size, 9pt);
+    font-weight: var(--plugin-font-weight, normal);
+    min-width: 73px;
+    padding: 1px 19px 2px 19px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-image: -ms-linear-gradient(top, #ECF4FC 0%, #DCECFC 100%);
+    border: 1px solid #7EB4EA;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+    border: 1px solid #569DE5;
+}
+
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+    background-image: -ms-linear-gradient(top, #DAECFC 0%, #C4E0FC 100%);
+    border: 1px solid #569DE5;
+}
+
+button[disabled],
+input[type="button"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled] {
+    color: #838383;
+    background: #F4F4F4 none;
+    border: 1px solid #B1B1B2;
+}
+
+/* Other form styles */
+fieldset {
+    border: 1px solid var(--plugin-textbox-border-color, #DBDDE6);
+}
+
+/* Link styles */
+a, a:link, a:visited, a:focus {
+    color: var(--plugin-link-color, #0E70C0);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--plugin-link-hover-color, #0E70C0);
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--plugin-link-active-color, #0E70C0);
+}
+
+/* Table styles */
+th {
+    color: var(--plugin-table-header-color, #1E1E1E);
+    background-color: var(--plugin-table-header-background-color, #EFEFE2);
+}
+
+td, th {
+    border-color: var(--plugin-table-border-color, #F0F0F0);
+}
+
+/* Disabled styles */
+:disabled {
+    color: var(--plugin-inactive-color, #A2A4A5);
+}
+
+/* Highlight styles
+   Use this class when you have a highlighted item, for example a highlighted row in a grid */
+.plugin-highlight {
+    color: var(--plugin-highlight-color, #FFFFFF);
+    background-color: var(--plugin-highlight-background-color, #3399FF);
+}
+
+/* Tooltip styles
+   This class will be included automatically on all tooltips
+   In VS tooltips aren't, by default, themed, so we just copy
+   the WPF tooltip defaults, which is what VS uses for its tooltips.
+   The one exception is that under system high-contrast themes tooltips
+   are in fact themed, so we use the !HCOnly to indicate we only want
+   our color tokens substituted under high-contrast themes.
+
+   We set its initial display style to none and its initial position
+   to (-500,-500) just to ensure that when we insert it into the document
+   (for measuring) it isn't visible until we have done the layout and
+   calculated its final position.
+*/
+#plugin-vs-tooltip {
+    display: none;
+    position: absolute;
+    top: -500px;
+    left: -500px;
+    -ms-high-contrast-adjust: none;
+    color: var(--plugin-tooltip-text-color, #575757);
+    background-color: var(--plugin-tooltip-background-color, #F1F2F7);
+    border: thin solid var(--plugin-tooltip-border-color, #767676);
+    padding: 4px 5px 3px 5px;
+    line-height: normal;
+    box-sizing: border-box;
+}
+
+#plugin-vs-tooltip > #plugin-vs-tooltip-nested-cell {
+    display: table-cell;
+    vertical-align: middle;
+    -ms-high-contrast-adjust: none;
+    color: var(--plugin-tooltip-text-color, #575757);
+    background-color: var(--plugin-tooltip-background-color, #F1F2F7);
+}
+
+#plugin-vs-tooltip > #plugin-vs-tooltip-nested-cell > #plugin-vs-tooltip-content {
+    -ms-high-contrast-adjust: none;
+    color: var(--plugin-tooltip-text-color, #575757);
+    background-color: var(--plugin-tooltip-background-color, #F1F2F7);
+}
+
+/* Selection styles */
+.selectNone {
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.selectElement {
+    -ms-user-select: element;
+    user-select: auto;
+}
+
+/* Context Menu styles */
+ul.plugin-contextmenu {
+    background-color: var(--plugin-contextmenu-background-color, #e9e8ea);
+    border: thin solid var(--plugin-contextmenu-border-color, #cdd0d6);
+    color: var(--plugin-contextmenu-color, #1E1E1E);
+    padding: 1px 2px 2px 2px;
+    margin: 0;
+    position: absolute;
+    display: none;
+    outline: none;
+    z-index: 100;
+    white-space: nowrap;
+    -ms-high-contrast-adjust: none;
+    line-height: normal;
+}
+
+.plugin-contextmenu .menuitem {
+    display: flex;
+    align-items: center;
+    /* VS context menu max width: https://devdiv.visualstudio.com/DevDiv/_git/VS?path=/src/env/shell/UIInternal/MainWindow/Controls/VsMenuItem.cs&version=GBmain&line=85&lineEnd=92&lineStartColumn=9&lineEndColumn=10&lineStyle=plain&_a=contents */
+    max-width: 660px;
+    cursor: default;
+    outline: none;
+    list-style: none;
+    margin-top: 1px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.plugin-contextmenu .menuitem:focus {
+    background-color: var(--plugin-contextmenu-hover-color, #f9f9fa);
+    color: var(--plugin-contextmenu-hover-text-color, #1E1E1E);
+    border-color: var(--plugin-contextmenu-hover-border-color);
+}
+
+.plugin-contextmenu .menuitem:active,
+.plugin-contextmenu .active {
+    background-color: var(--plugin-contextmenu-active-color, #f9f9fa);
+    color: var(--plugin-contextmenu-hover-text-color, #1E1E1E);
+    border-color: var(--plugin-highlight-background-color);
+}
+
+.plugin-contextmenu .disabled:hover,
+.plugin-contextmenu .disabled:active,
+.plugin-contextmenu .disabled:focus,
+.plugin-contextmenu .disabled {
+    background-color: var(--plugin-contextmenu-background-color, #e9e8ea);
+    color: var(--plugin-contextmenu-inactive-text-color, #a2a4a5);
+}
+
+.plugin-contextmenu .menuitem .icon {
+    margin: 0 10px 0 6px;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+}
+
+.plugin-contextmenu .menuitem .checkbox {
+    background-image: var(--plugin-contextmenu-icon-checkbox, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/PbtGwMpgAWIfXx8iFS9ZcsWJgYSAQuctW7tejzqgoIDIQx8Nrx69QqobvKUyciC+DSsXLUSSIaHhROlAWj8/v37HB2dxMTEiNKA1Xh0DR2dHUBHvwIDrMajhBIQJCUmnTp1EmI2VuPRNQDNA5oKNBvIxmo8Fj/ATcVqPLoNEEvwxyALZlziBySnJUZSkzdAgAEAfm84vuieuk0AAAAASUVORK5CYII=));
+}
+
+.plugin-contextmenu .hidden {
+    display: none;
+}
+
+.plugin-contextmenu .disabled {
+    color: var(--plugin-contextmenu-inactive-text-color, #a2a4a5);
+}
+
+.plugin-contextmenu .menuitem .main {
+    padding: 4px 50px 5px 0;
+    margin-right: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.plugin-contextmenu .menuitem .shortcut {
+    min-width: 25px;
+    flex-shrink: 0;
+    padding-right: 25px;
+}
+
+.plugin-contextmenu .menuitem .arrow {
+    overflow: visible;
+}
+
+.plugin-contextmenu .menuitem .arrow:before,
+.plugin-contextmenu .menuitem.disabled:hover .arrow:before,
+.plugin-contextmenu .menuitem.disabled:active .arrow:before,
+.plugin-contextmenu .menuitem.disabled:focus .arrow:before,
+.plugin-contextmenu .menuitem.disabled .arrow:before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAYAAADAp4fuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpiWL5i5X8gYEDGTKdOnmCYOXP2fwYkwAQibt68ztDXP+E/iiAIPHn8iGHChIn/UQSFhIQZCgryGUFsFhAhIyvHUFRYwAg3dMaMWRi2AwQYAAcRMJwq3CX+AAAAAElFTkSuQmCC);
+}
+
+.plugin-contextmenu .menuitem:hover .arrow:before,
+.plugin-contextmenu .menuitem:active .arrow:before,
+.plugin-contextmenu .menuitem:focus .arrow:before,
+.plugin-contextmenu .active .arrow:before {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAYAAADAp4fuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFRJREFUeNpiKNzy6D8QMCBjBoaqM/+DltxGkWACCjOsu/aRwXrmDZASMGCCMY49+spgP/vmfxRBdRF2hoOp6oxwQSs5boYbhTqMMAUM6JaAMECAAQDqqjmrw1gHVwAAAABJRU5ErkJggg==);
+}
+
+.plugin-contextmenu .menuitem[role="separator"] > * {
+    height: 0;
+}
+
+.plugin-contextmenu .menuitem .hr,
+.plugin-contextmenu .menuitem:hover .hr,
+.plugin-contextmenu .menuitem:active .hr,
+.plugin-contextmenu .menuitem:focus .hr,
+.plugin-contextmenu .active .hr {
+    height: 1px;
+    width: 100%;
+    background-color: var(--plugin-contextmenu-separator-color, #cdd0d6);
+    padding: 0;
+}
+</style>
+    <script src="http://scriptedhost.vs/plugin.js" type="text/javascript" class="selectNone"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" class="selectNone">
+    <meta charset="utf-8" class="selectNone">
+    <link rel="stylesheet" href="c:\program files\microsoft visual studio\18\professional\common7\ide\commonextensions\microsoft\markdown\Preview\Dependencies\highlight.css" id="CSSTheme" class="selectNone">
+    <link rel="stylesheet" href=" " id="FontSize" class="selectNone">
+    <script type="text/javascript" src="./DOMPurify/purify.min.js" id="DomPurifyTag" class="selectNone"></script>
+    <script type="text/javascript" src="./daytonaHtmlContextMenu.js" id="HTMLContextMenuScript" class="selectNone"></script>
+    <script type="text/javascript" src="./mermaidJS/mermaid.min.js" class="selectNone"></script>
+    <style class="selectNone">
+        html, body {
+        }
+    </style>
+    <title class="selectNone">Markdown Preview</title>
+    <meta http-equiv="cache-control" content="no-cache" class="selectNone">
+<base href="file://C:/Users/Arjun_Nakkeeran/Documents/Developer Sandbox/SecureWebApi/MyMicroService/docs/orders-class-diagram.md"></head>
+<body class="selectNone">
+    <div id="___markdown-content___" class="selectNone" data-plugin-contextmenu="plugin-contextmenu-d2f17a5f-a846-9db2-dac8-230c3b6d6e32"><svg aria-roledescription="class" role="graphics-document document" viewBox="0 0 1965.253173828125 746" style="max-width: 1965.253173828125px;" class="classDiagram" xmlns="http://www.w3.org/2000/svg" width="100%" id="mermaid-0"><style>#mermaid-0{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-0 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-0 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-0 .error-icon{fill:#552222;}#mermaid-0 .error-text{fill:#552222;stroke:#552222;}#mermaid-0 .edge-thickness-normal{stroke-width:1px;}#mermaid-0 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-0 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-0 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-0 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-0 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-0 .marker{fill:#333333;stroke:#333333;}#mermaid-0 .marker.cross{stroke:#333333;}#mermaid-0 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-0 p{margin:0;}#mermaid-0 g.classGroup text{fill:#9370DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#mermaid-0 g.classGroup text .title{font-weight:bolder;}#mermaid-0 .nodeLabel,#mermaid-0 .edgeLabel{color:#131300;}#mermaid-0 .edgeLabel .label rect{fill:#ECECFF;}#mermaid-0 .label text{fill:#131300;}#mermaid-0 .labelBkg{background:#ECECFF;}#mermaid-0 .edgeLabel .label span{background:#ECECFF;}#mermaid-0 .classTitle{font-weight:bolder;}#mermaid-0 .node rect,#mermaid-0 .node circle,#mermaid-0 .node ellipse,#mermaid-0 .node polygon,#mermaid-0 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-0 .divider{stroke:#9370DB;stroke-width:1;}#mermaid-0 g.clickable{cursor:pointer;}#mermaid-0 g.classGroup rect{fill:#ECECFF;stroke:#9370DB;}#mermaid-0 g.classGroup line{stroke:#9370DB;stroke-width:1;}#mermaid-0 .classLabel .box{stroke:none;stroke-width:0;fill:#ECECFF;opacity:0.5;}#mermaid-0 .classLabel .label{fill:#9370DB;font-size:10px;}#mermaid-0 .relation{stroke:#333333;stroke-width:1;fill:none;}#mermaid-0 .dashed-line{stroke-dasharray:3;}#mermaid-0 .dotted-line{stroke-dasharray:1 2;}#mermaid-0 #compositionStart,#mermaid-0 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 #compositionEnd,#mermaid-0 .composition{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 #dependencyStart,#mermaid-0 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 #dependencyStart,#mermaid-0 .dependency{fill:#333333!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 #extensionStart,#mermaid-0 .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 #extensionEnd,#mermaid-0 .extension{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 #aggregationStart,#mermaid-0 .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 #aggregationEnd,#mermaid-0 .aggregation{fill:transparent!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 #lollipopStart,#mermaid-0 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 #lollipopEnd,#mermaid-0 .lollipop{fill:#ECECFF!important;stroke:#333333!important;stroke-width:1;}#mermaid-0 .edgeTerminals{font-size:11px;line-height:initial;}#mermaid-0 .classTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-0 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-0 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-0 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker aggregation class" id="mermaid-0_class-aggregationStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker aggregation class" id="mermaid-0_class-aggregationEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker extension class" id="mermaid-0_class-extensionStart"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker extension class" id="mermaid-0_class-extensionEnd"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker composition class" id="mermaid-0_class-compositionStart"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker composition class" id="mermaid-0_class-compositionEnd"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="6" class="marker dependency class" id="mermaid-0_class-dependencyStart"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="13" class="marker dependency class" id="mermaid-0_class-dependencyEnd"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="13" class="marker lollipop class" id="mermaid-0_class-lollipopStart"><circle r="6" cy="7" cx="7" fill="transparent" stroke="black"></circle></marker></defs><defs><marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="1" class="marker lollipop class" id="mermaid-0_class-lollipopEnd"><circle r="6" cy="7" cx="7" fill="transparent" stroke="black"></circle></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#mermaid-0_class-dependencyEnd)" style="" class="edge-thickness-normal edge-pattern-solid relation" id="id_OrdersController_IMediator_1" d="M1600.925,248L1600.925,254.167C1600.925,260.333,1600.925,272.667,1600.925,284C1600.925,295.333,1600.925,305.667,1600.925,310.833L1600.925,316"></path><path marker-start="url(#mermaid-0_class-extensionStart)" style="" class="edge-thickness-normal edge-pattern-dashed relation" id="id_IRequest_GetOrdersQuery_2" d="M1854.923,456.72L1856.122,463.433C1857.32,470.146,1859.718,483.573,1860.917,504.453C1862.116,525.333,1862.116,553.667,1862.116,567.833L1862.116,582"></path><path marker-start="url(#mermaid-0_class-extensionStart)" style="" class="edge-thickness-normal edge-pattern-dashed relation" id="id_IRequest_CreateOrderCommand_3" d="M1775.251,442.089L1764.532,451.241C1753.813,460.392,1732.375,478.696,1710.65,500.015C1688.924,521.333,1666.91,545.667,1655.903,557.833L1644.896,570"></path><path marker-start="url(#mermaid-0_class-extensionStart)" style="" class="edge-thickness-normal edge-pattern-dashed relation" id="id_IRequest_UpdateOrderCommand_4" d="M1772.051,410.826L1733.087,425.188C1694.123,439.551,1616.194,468.275,1535.035,498.274C1453.876,528.272,1369.486,559.544,1327.292,575.18L1285.097,590.816"></path><path marker-start="url(#mermaid-0_class-extensionStart)" style="" class="edge-thickness-normal edge-pattern-dashed relation" id="id_IRequestHandler_GetOrdersHandler_5" d="M730.819,152.22L814.146,174.35C897.473,196.48,1064.127,240.74,1147.454,269.037C1230.781,297.333,1230.781,309.667,1230.781,315.833L1230.781,322"></path><path marker-start="url(#mermaid-0_class-extensionStart)" style="" class="edge-thickness-normal edge-pattern-dashed relation" id="id_IRequestHandler_CreateOrderHandler_6" d="M686.743,196.855L696.797,211.545C706.85,226.236,726.958,255.618,737.012,276.476C747.066,297.333,747.066,309.667,747.066,315.833L747.066,322"></path><path marker-start="url(#mermaid-0_class-extensionStart)" style="" class="edge-thickness-normal edge-pattern-dashed relation" id="id_IRequestHandler_UpdateOrderHandler_7" d="M549.061,163.455L497.318,183.713C445.576,203.97,342.091,244.485,290.349,270.909C238.606,297.333,238.606,309.667,238.606,315.833L238.606,322"></path><path marker-end="url(#mermaid-0_class-dependencyEnd)" style="" class="edge-thickness-normal edge-pattern-solid relation" id="id_GetOrdersHandler_GetOrdersQuery_8" d="M1377.096,448L1396.063,456.167C1415.03,464.333,1452.963,480.667,1517.012,506.443C1581.061,532.219,1671.225,567.437,1716.307,585.046L1761.389,602.656"></path><path marker-end="url(#mermaid-0_class-dependencyEnd)" style="" class="edge-thickness-normal edge-pattern-solid relation" id="id_CreateOrderHandler_CreateOrderCommand_9" d="M858.289,448L872.706,456.167C887.124,464.333,915.96,480.667,1012.36,507.555C1108.761,534.443,1272.726,571.886,1354.709,590.608L1436.691,609.329"></path><path marker-end="url(#mermaid-0_class-dependencyEnd)" style="" class="edge-thickness-normal edge-pattern-solid relation" id="id_UpdateOrderHandler_UpdateOrderCommand_10" d="M346.043,448L359.97,456.167C373.897,464.333,401.751,480.667,511.238,508.149C620.725,535.631,811.845,574.262,907.406,593.577L1002.966,612.892"></path><path marker-end="url(#mermaid-0_class-dependencyEnd)" style="" class="edge-thickness-normal edge-pattern-solid relation" id="id_GetOrdersHandler_Order_11" d="M1119.558,448L1105.14,456.167C1090.723,464.333,1061.887,480.667,972.157,508.194C882.426,535.722,731.801,574.445,656.488,593.806L581.175,613.167"></path><path marker-end="url(#mermaid-0_class-dependencyEnd)" style="" class="edge-thickness-normal edge-pattern-solid relation" id="id_CreateOrderHandler_Order_12" d="M639.629,448L625.702,456.167C611.775,464.333,583.921,480.667,565.606,496.143C547.291,511.619,538.515,526.237,534.127,533.547L529.739,540.856"></path><path marker-end="url(#mermaid-0_class-dependencyEnd)" style="" class="edge-thickness-normal edge-pattern-solid relation" id="id_UpdateOrderHandler_Order_13" d="M197.159,448L191.786,456.167C186.413,464.333,175.668,480.667,202.35,504.118C229.033,527.57,293.144,558.139,325.199,573.424L357.254,588.709"></path></g><g class="edgeLabels"><g transform="translate(1600.9249877929688, 285)" class="edgeLabel"><g transform="translate(-15.21250057220459, -12)" class="label"><foreignObject height="24" width="30.42500114440918"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"><p>uses</p></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, -12)" class="label"><foreignObject height="24" width="0"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"></span></div></foreignObject></g></g><g transform="translate(1490.896861076355, 497)" class="edgeLabel"><g transform="translate(-27.368749618530273, -12)" class="label"><foreignObject height="24" width="54.73749923706055"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"><p>handles</p></span></div></foreignObject></g></g><g transform="translate(944.795298576355, 497)" class="edgeLabel"><g transform="translate(-27.368749618530273, -12)" class="label"><foreignObject height="24" width="54.73749923706055"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"><p>handles</p></span></div></foreignObject></g></g><g transform="translate(429.60468006134033, 497)" class="edgeLabel"><g transform="translate(-27.368749618530273, -12)" class="label"><foreignObject height="24" width="54.73749923706055"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"><p>handles</p></span></div></foreignObject></g></g><g transform="translate(1033.0515489578247, 497)" class="edgeLabel"><g transform="translate(-40.88750076293945, -12)" class="label"><foreignObject height="24" width="81.7750015258789"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"><p>returns List</p></span></div></foreignObject></g></g><g transform="translate(556.0671796798706, 497)" class="edgeLabel"><g transform="translate(-79.09375, -12)" class="label"><foreignObject height="24" width="158.1875"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel" style=";display: inline-block"><p>creates and returns Id</p></span></div></foreignObject></g></g><g transform="translate(164.92187213897705, 497)" class="edgeLabel"><g transform="translate(-100, -24)" class="label"><foreignObject height="48" width="200"><div class="labelBkg" xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="edgeLabel" style=";display: inline-block"><p>creates/updates and returns Id</p></span></div></foreignObject></g></g></g><g class="nodes"><g transform="translate(1600.9249877929688, 128)" id="classId-OrdersController-11" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-175.21249389648438 -120 L175.21249389648438 -120 L175.21249389648438 120 L-175.21249389648438 120"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-175.21249389648438 -120 C-92.46264727308193 -120, -9.71280064967948 -120, 175.21249389648438 -120 M-175.21249389648438 -120 C-47.68831691593509 -120, 79.8358600646142 -120, 175.21249389648438 -120 M175.21249389648438 -120 C175.21249389648438 -49.69896010776529, 175.21249389648438 20.602079784469424, 175.21249389648438 120 M175.21249389648438 -120 C175.21249389648438 -28.639761190366926, 175.21249389648438 62.72047761926615, 175.21249389648438 120 M175.21249389648438 120 C79.18176982422735 120, -16.848954248029685 120, -175.21249389648438 120 M175.21249389648438 120 C37.36402744308913 120, -100.48443901030612 120, -175.21249389648438 120 M-175.21249389648438 120 C-175.21249389648438 67.44235929864541, -175.21249389648438 14.884718597290814, -175.21249389648438 -120 M-175.21249389648438 120 C-175.21249389648438 28.685806242512143, -175.21249389648438 -62.628387514975714, -175.21249389648438 -120"></path></g><g transform="translate(0, -96)" class="annotation-group text"></g><g transform="translate(-63.150001525878906, -96)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="126.30000305175781"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 169px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>OrdersController</p></span></div></foreignObject></g></g><g transform="translate(-163.21249389648438, -48)" class="members-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="156.5124969482422"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 212px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>- IMediator _mediator</p></span></div></foreignObject></g></g><g transform="translate(-163.21249389648438, 0)" class="methods-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="123.8125"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 218px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Get() : : Task&gt;&gt;</p></span></div></foreignObject></g><g transform="translate(0,12)" style="" class="label"><foreignObject height="24" width="172.625"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 242px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Get(id: Guid) : : Task&gt;</p></span></div></foreignObject></g><g transform="translate(0,36)" style="" class="label"><foreignObject height="24" width="200.9375"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 249px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Post(order: Order) : : Task</p></span></div></foreignObject></g><g transform="translate(0,60)" style="" class="label"><foreignObject height="24" width="263.2749938964844"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 305px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Put(id: Guid, order: Order) : : Task</p></span></div></foreignObject></g><g transform="translate(0,84)" style="" class="label"><foreignObject height="24" width="243.8249969482422"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 290px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Delete(id: Guid) : : ActionResult</p></span></div></foreignObject></g></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-175.21249389648438 -72 C-68.96463188561204 -72, 37.2832301252603 -72, 175.21249389648438 -72 M-175.21249389648438 -72 C-64.02558729247703 -72, 47.16131931153032 -72, 175.21249389648438 -72"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-175.21249389648438 -24 C-97.66797882899745 -24, -20.12346376151052 -24, 175.21249389648438 -24 M-175.21249389648438 -24 C-75.66427465887439 -24, 23.883944578735594 -24, 175.21249389648438 -24"></path></g></g><g transform="translate(469.0171775817871, 642)" id="classId-Order-12" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-106.34687805175781 -96 L106.34687805175781 -96 L106.34687805175781 96 L-106.34687805175781 96"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-106.34687805175781 -96 C-29.847729740502274 -96, 46.651418570753265 -96, 106.34687805175781 -96 M-106.34687805175781 -96 C-32.18627119690913 -96, 41.97433565793955 -96, 106.34687805175781 -96 M106.34687805175781 -96 C106.34687805175781 -29.110127405299878, 106.34687805175781 37.779745189400245, 106.34687805175781 96 M106.34687805175781 -96 C106.34687805175781 -33.14256036869577, 106.34687805175781 29.714879262608463, 106.34687805175781 96 M106.34687805175781 96 C55.51663764168678 96, 4.686397231615743 96, -106.34687805175781 96 M106.34687805175781 96 C31.09072901855785 96, -44.16542001464211 96, -106.34687805175781 96 M-106.34687805175781 96 C-106.34687805175781 23.92590360212806, -106.34687805175781 -48.14819279574388, -106.34687805175781 -96 M-106.34687805175781 96 C-106.34687805175781 38.35654606746127, -106.34687805175781 -19.286907865077467, -106.34687805175781 -96"></path></g><g transform="translate(0, -72)" class="annotation-group text"></g><g transform="translate(-21.70625114440918, -72)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="43.41250228881836"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 92px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>Order</p></span></div></foreignObject></g></g><g transform="translate(-94.34687805175781, -24)" class="members-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="64.4375"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 124px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Guid Id</p></span></div></foreignObject></g><g transform="translate(0,12)" style="" class="label"><foreignObject height="24" width="166.9875030517578"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 227px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ string CustomerName</p></span></div></foreignObject></g><g transform="translate(0,36)" style="" class="label"><foreignObject height="24" width="82.80000305175781"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 139px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ List Items</p></span></div></foreignObject></g><g transform="translate(0,60)" style="" class="label"><foreignObject height="24" width="102.42500305175781"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 160px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ string Status</p></span></div></foreignObject></g></g><g transform="translate(-94.34687805175781, 96)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-106.34687805175781 -48 C-33.132577110956376 -48, 40.08172382984506 -48, 106.34687805175781 -48 M-106.34687805175781 -48 C-34.756518885326756 -48, 36.8338402811043 -48, 106.34687805175781 -48"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-106.34687805175781 72 C-42.73635306103254 72, 20.874171929692736 72, 106.34687805175781 72 M-106.34687805175781 72 C-38.56516811154526 72, 29.21654182866729 72, 106.34687805175781 72"></path></g></g><g transform="translate(1862.1156129837036, 642)" id="classId-GetOrdersQuery-13" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-95.13750457763672 -60 L95.13750457763672 -60 L95.13750457763672 60 L-95.13750457763672 60"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-95.13750457763672 -60 C-42.445279134438955 -60, 10.246946308758808 -60, 95.13750457763672 -60 M-95.13750457763672 -60 C-56.07184547822195 -60, -17.006186378807186 -60, 95.13750457763672 -60 M95.13750457763672 -60 C95.13750457763672 -20.602414508872783, 95.13750457763672 18.795170982254433, 95.13750457763672 60 M95.13750457763672 -60 C95.13750457763672 -25.77876134375532, 95.13750457763672 8.442477312489359, 95.13750457763672 60 M95.13750457763672 60 C25.267415764501763 60, -44.60267304863319 60, -95.13750457763672 60 M95.13750457763672 60 C53.2942508858727 60, 11.45099719410868 60, -95.13750457763672 60 M-95.13750457763672 60 C-95.13750457763672 20.62005148302123, -95.13750457763672 -18.759897033957543, -95.13750457763672 -60 M-95.13750457763672 60 C-95.13750457763672 18.407151192971163, -95.13750457763672 -23.185697614057673, -95.13750457763672 -60"></path></g><g transform="translate(0, -36)" class="annotation-group text"></g><g transform="translate(-60.97500228881836, -36)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="121.95000457763672"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 166px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>GetOrdersQuery</p></span></div></foreignObject></g></g><g transform="translate(-83.13750457763672, 12)" class="members-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="105.30000305175781"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 165px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Guid OrderId</p></span></div></foreignObject></g></g><g transform="translate(-83.13750457763672, 60)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-95.13750457763672 -12 C-51.22822862741986 -12, -7.318952677203001 -12, 95.13750457763672 -12 M-95.13750457763672 -12 C-52.18924660682475 -12, -9.240988636012787 -12, 95.13750457763672 -12"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-95.13750457763672 36 C-36.7191514530233 36, 21.699201671590117 36, 95.13750457763672 36 M-95.13750457763672 36 C-42.595446298065 36, 9.94661198150672 36, 95.13750457763672 36"></path></g></g><g transform="translate(1579.759358406067, 642)" id="classId-CreateOrderCommand-14" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-137.21875762939453 -72 L137.21875762939453 -72 L137.21875762939453 72 L-137.21875762939453 72"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-137.21875762939453 -72 C-79.44636649751993 -72, -21.673975365645333 -72, 137.21875762939453 -72 M-137.21875762939453 -72 C-81.63783321518227 -72, -26.056908800970007 -72, 137.21875762939453 -72 M137.21875762939453 -72 C137.21875762939453 -15.260402057562246, 137.21875762939453 41.47919588487551, 137.21875762939453 72 M137.21875762939453 -72 C137.21875762939453 -27.249224247436622, 137.21875762939453 17.501551505126756, 137.21875762939453 72 M137.21875762939453 72 C58.15559145935596 72, -20.90757471068261 72, -137.21875762939453 72 M137.21875762939453 72 C73.06140312561918 72, 8.904048621843828 72, -137.21875762939453 72 M-137.21875762939453 72 C-137.21875762939453 37.197544995986725, -137.21875762939453 2.3950899919734496, -137.21875762939453 -72 M-137.21875762939453 72 C-137.21875762939453 35.979656237532744, -137.21875762939453 -0.040687524934512, -137.21875762939453 -72"></path></g><g transform="translate(0, -48)" class="annotation-group text"></g><g transform="translate(-83.45000457763672, -48)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="166.90000915527344"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 210px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>CreateOrderCommand</p></span></div></foreignObject></g></g><g transform="translate(-125.21875762939453, 0)" class="members-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="166.9875030517578"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 227px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ string CustomerName</p></span></div></foreignObject></g><g transform="translate(0,12)" style="" class="label"><foreignObject height="24" width="82.80000305175781"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 139px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ List Items</p></span></div></foreignObject></g></g><g transform="translate(-125.21875762939453, 72)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-137.21875 -24 C-42.725982210248105 -24, 51.76678557950379 -24, 137.21875 -24 M-137.21875 -24 C-65.9552172683998 -24, 5.308315463200387 -24, 137.21875 -24"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-137.21875 48 C-67.61914961228258 48, 1.9804507754348322 48, 137.21875 48 M-137.21875 48 C-73.71980080321543 48, -10.220851606430884 48, 137.21875 48"></path></g></g><g transform="translate(1146.9718570709229, 642)" id="classId-UpdateOrderCommand-15" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-138.12500762939453 -84 L138.12500762939453 -84 L138.12500762939453 84 L-138.12500762939453 84"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-138.12500762939453 -84 C-76.73707636972073 -84, -15.34914511004692 -84, 138.12500762939453 -84 M-138.12500762939453 -84 C-79.32163379645604 -84, -20.518259963517536 -84, 138.12500762939453 -84 M138.12500762939453 -84 C138.12500762939453 -38.067930365770316, 138.12500762939453 7.864139268459368, 138.12500762939453 84 M138.12500762939453 -84 C138.12500762939453 -37.784083439071765, 138.12500762939453 8.43183312185647, 138.12500762939453 84 M138.12500762939453 84 C29.369152617051128 84, -79.38670239529228 84, -138.12500762939453 84 M138.12500762939453 84 C39.609807296971354 84, -58.90539303545182 84, -138.12500762939453 84 M-138.12500762939453 84 C-138.12500762939453 38.575935401821766, -138.12500762939453 -6.848129196356467, -138.12500762939453 -84 M-138.12500762939453 84 C-138.12500762939453 30.840647562907755, -138.12500762939453 -22.31870487418449, -138.12500762939453 -84"></path></g><g transform="translate(0, -60)" class="annotation-group text"></g><g transform="translate(-85.26250457763672, -60)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="170.52500915527344"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 216px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>UpdateOrderCommand</p></span></div></foreignObject></g></g><g transform="translate(-126.12500762939453, -12)" class="members-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="105.30000305175781"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 165px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Guid OrderId</p></span></div></foreignObject></g><g transform="translate(0,12)" style="" class="label"><foreignObject height="24" width="166.9875030517578"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 227px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ string CustomerName</p></span></div></foreignObject></g><g transform="translate(0,36)" style="" class="label"><foreignObject height="24" width="82.80000305175781"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 139px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ List Items</p></span></div></foreignObject></g></g><g transform="translate(-126.12500762939453, 84)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-138.125 -36 C-66.59040067690624 -36, 4.944198646187516 -36, 138.125 -36 M-138.125 -36 C-36.4627168957155 -36, 65.199566208569 -36, 138.125 -36"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-138.125 60 C-66.37265397654728 60, 5.379692046905433 60, 138.125 60 M-138.125 60 C-50.727172208823305 60, 36.67065558235339 60, 138.125 60"></path></g></g><g transform="translate(1230.781234741211, 385)" id="classId-GetOrdersHandler-16" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-205.8625030517578 -63 L205.8625030517578 -63 L205.8625030517578 63 L-205.8625030517578 63"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-205.8625030517578 -63 C-122.94985298243041 -63, -40.037202913103016 -63, 205.8625030517578 -63 M-205.8625030517578 -63 C-68.15157872394997 -63, 69.55934560385788 -63, 205.8625030517578 -63 M205.8625030517578 -63 C205.8625030517578 -15.356626931302898, 205.8625030517578 32.2867461373942, 205.8625030517578 63 M205.8625030517578 -63 C205.8625030517578 -24.072027348206824, 205.8625030517578 14.855945303586353, 205.8625030517578 63 M205.8625030517578 63 C64.78208233015565 63, -76.29833839144652 63, -205.8625030517578 63 M205.8625030517578 63 C100.45073540054396 63, -4.961032250669888 63, -205.8625030517578 63 M-205.8625030517578 63 C-205.8625030517578 32.61162244724738, -205.8625030517578 2.223244894494755, -205.8625030517578 -63 M-205.8625030517578 63 C-205.8625030517578 35.671588786122896, -205.8625030517578 8.343177572245786, -205.8625030517578 -63"></path></g><g transform="translate(0, -39)" class="annotation-group text"></g><g transform="translate(-67.76250457763672, -39)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="135.52500915527344"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 179px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>GetOrdersHandler</p></span></div></foreignObject></g></g><g transform="translate(-193.8625030517578, 9)" class="members-group text"></g><g transform="translate(-193.8625030517578, 39)" class="methods-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="319.9624938964844"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 389px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Handle(request: GetOrdersQuery) : : Task&gt;</p></span></div></foreignObject></g></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-205.8625030517578 -15 C-73.60443393161384 -15, 58.65363518853013 -15, 205.8625030517578 -15 M-205.8625030517578 -15 C-62.68997858068312 -15, 80.48254589039158 -15, 205.8625030517578 -15"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-205.8625030517578 9 C-107.72613120536242 9, -9.58975935896703 9, 205.8625030517578 9 M-205.8625030517578 9 C-89.53581378850026 9, 26.790875474757286 9, 205.8625030517578 9"></path></g></g><g transform="translate(747.0656127929688, 385)" id="classId-CreateOrderHandler-17" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-227.85311889648438 -63 L227.85311889648438 -63 L227.85311889648438 63 L-227.85311889648438 63"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-227.85311889648438 -63 C-119.9391205362018 -63, -12.025122175919222 -63, 227.85311889648438 -63 M-227.85311889648438 -63 C-101.72166016678327 -63, 24.409798562917842 -63, 227.85311889648438 -63 M227.85311889648438 -63 C227.85311889648438 -28.93383813290349, 227.85311889648438 5.132323734193022, 227.85311889648438 63 M227.85311889648438 -63 C227.85311889648438 -15.333425535219433, 227.85311889648438 32.33314892956113, 227.85311889648438 63 M227.85311889648438 63 C123.53189287791325 63, 19.210666859342126 63, -227.85311889648438 63 M227.85311889648438 63 C132.72859302992964 63, 37.604067163374935 63, -227.85311889648438 63 M-227.85311889648438 63 C-227.85311889648438 36.29968833276844, -227.85311889648438 9.59937666553688, -227.85311889648438 -63 M-227.85311889648438 63 C-227.85311889648438 29.029884155105144, -227.85311889648438 -4.940231689789712, -227.85311889648438 -63"></path></g><g transform="translate(0, -39)" class="annotation-group text"></g><g transform="translate(-76.1187515258789, -39)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="152.2375030517578"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 193px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>CreateOrderHandler</p></span></div></foreignObject></g></g><g transform="translate(-215.85311889648438, 9)" class="members-group text"></g><g transform="translate(-215.85311889648438, 39)" class="methods-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="355.5874938964844"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 404px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Handle(request: CreateOrderCommand) : : Task</p></span></div></foreignObject></g></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-227.85311889648438 -15 C-72.68974124160377 -15, 82.47363641327684 -15, 227.85311889648438 -15 M-227.85311889648438 -15 C-100.99296262962554 -15, 25.8671936372333 -15, 227.85311889648438 -15"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-227.85311889648438 9 C-75.53507435970502 9, 76.78297017707433 9, 227.85311889648438 9 M-227.85311889648438 9 C-75.08303190591334 9, 77.68705508465769 9, 227.85311889648438 9"></path></g></g><g transform="translate(238.6062469482422, 385)" id="classId-UpdateOrderHandler-18" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-230.6062469482422 -63 L230.6062469482422 -63 L230.6062469482422 63 L-230.6062469482422 63"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-230.6062469482422 -63 C-48.949035552401114 -63, 132.70817584343996 -63, 230.6062469482422 -63 M-230.6062469482422 -63 C-95.60325848668523 -63, 39.39972997487172 -63, 230.6062469482422 -63 M230.6062469482422 -63 C230.6062469482422 -27.217184498225492, 230.6062469482422 8.565631003549015, 230.6062469482422 63 M230.6062469482422 -63 C230.6062469482422 -25.81851609311012, 230.6062469482422 11.362967813779761, 230.6062469482422 63 M230.6062469482422 63 C66.113008583723 63, -98.38022978079618 63, -230.6062469482422 63 M230.6062469482422 63 C79.2723467349768 63, -72.0615534782886 63, -230.6062469482422 63 M-230.6062469482422 63 C-230.6062469482422 17.530205534980716, -230.6062469482422 -27.939588930038568, -230.6062469482422 -63 M-230.6062469482422 63 C-230.6062469482422 27.727359219720846, -230.6062469482422 -7.545281560558308, -230.6062469482422 -63"></path></g><g transform="translate(0, -39)" class="annotation-group text"></g><g transform="translate(-77.9375, -39)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="155.875"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 199px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>UpdateOrderHandler</p></span></div></foreignObject></g></g><g transform="translate(-218.6062469482422, 9)" class="members-group text"></g><g transform="translate(-218.6062469482422, 39)" class="methods-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="359.2749938964844"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 409px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Handle(request: UpdateOrderCommand) : : Task</p></span></div></foreignObject></g></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-230.6062469482422 -15 C-69.43682270491502 -15, 91.73260153841215 -15, 230.6062469482422 -15 M-230.6062469482422 -15 C-60.786618854175686 -15, 109.03300923989082 -15, 230.6062469482422 -15"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-230.6062469482422 9 C-69.48760954020949 9, 91.6310278678232 9, 230.6062469482422 9 M-230.6062469482422 9 C-62.96107521291134 9, 104.68409652241951 9, 230.6062469482422 9"></path></g></g><g transform="translate(1600.9249877929688, 385)" id="classId-IMediator-19" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-114.28125 -63 L114.28125 -63 L114.28125 63 L-114.28125 63"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-114.28125 -63 C-48.371209783068736 -63, 17.53883043386253 -63, 114.28125 -63 M-114.28125 -63 C-36.636002406806256 -63, 41.00924518638749 -63, 114.28125 -63 M114.28125 -63 C114.28125 -15.956035964861236, 114.28125 31.087928070277528, 114.28125 63 M114.28125 -63 C114.28125 -32.615920081269756, 114.28125 -2.2318401625395126, 114.28125 63 M114.28125 63 C53.850157102975416 63, -6.580935794049168 63, -114.28125 63 M114.28125 63 C23.02326940056338 63, -68.23471119887324 63, -114.28125 63 M-114.28125 63 C-114.28125 15.190789335545404, -114.28125 -32.61842132890919, -114.28125 -63 M-114.28125 63 C-114.28125 27.209953709753478, -114.28125 -8.580092580493044, -114.28125 -63"></path></g><g transform="translate(0, -39)" class="annotation-group text"></g><g transform="translate(-35.20000076293945, -39)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="70.4000015258789"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 120px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>IMediator</p></span></div></foreignObject></g></g><g transform="translate(-102.28125, 9)" class="members-group text"></g><g transform="translate(-102.28125, 39)" class="methods-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="169.3625030517578"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 221px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>+ Send(request) : : Task</p></span></div></foreignObject></g></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-114.28125 -15 C-45.03110253897238 -15, 24.219044922055247 -15, 114.28125 -15 M-114.28125 -15 C-29.1332496542844 -15, 56.0147506914312 -15, 114.28125 -15"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-114.28125 9 C-46.44358637678695 9, 21.394077246426093 9, 114.28125 9 M-114.28125 9 C-37.95340750783956 9, 38.374434984320885 9, 114.28125 9"></path></g></g><g transform="translate(1842.1156129837036, 385)" id="classId-IRequest-20" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-53.17499923706055 -54 L53.17499923706055 -54 L53.17499923706055 54 L-53.17499923706055 54"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-53.17499923706055 -54 C-15.63727607107159 -54, 21.900447094917368 -54, 53.17499923706055 -54 M-53.17499923706055 -54 C-28.382472178947687 -54, -3.5899451208348268 -54, 53.17499923706055 -54 M53.17499923706055 -54 C53.17499923706055 -23.505190717897488, 53.17499923706055 6.989618564205024, 53.17499923706055 54 M53.17499923706055 -54 C53.17499923706055 -12.669696364169916, 53.17499923706055 28.66060727166017, 53.17499923706055 54 M53.17499923706055 54 C16.135182075470944 54, -20.90463508611866 54, -53.17499923706055 54 M53.17499923706055 54 C20.72416330844385 54, -11.726672620172849 54, -53.17499923706055 54 M-53.17499923706055 54 C-53.17499923706055 25.61315410153331, -53.17499923706055 -2.7736917969333774, -53.17499923706055 -54 M-53.17499923706055 54 C-53.17499923706055 31.38961765193501, -53.17499923706055 8.779235303870017, -53.17499923706055 -54"></path></g><g transform="translate(-41.17499923706055, -30)" class="annotation-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="82.3499984741211"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 127px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>«interface»</p></span></div></foreignObject></g></g><g transform="translate(-32.32500076293945, -6)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="64.6500015258789"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 111px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>IRequest</p></span></div></foreignObject></g></g><g transform="translate(-41.17499923706055, 42)" class="members-group text"></g><g transform="translate(-41.17499923706055, 72)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-53.17499923706055 18 C-16.474316042410884 18, 20.22636715223878 18, 53.17499923706055 18 M-53.17499923706055 18 C-29.54798770075002 18, -5.9209761644394945 18, 53.17499923706055 18"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-53.17499923706055 36 C-17.81031254177808 36, 17.554374153504384 36, 53.17499923706055 36 M-53.17499923706055 36 C-16.159602431269896 36, 20.855794374520755 36, 53.17499923706055 36"></path></g></g><g transform="translate(639.6218614578247, 128)" id="classId-IRequestHandler-21" class="node default"><g class="basic label-container"><path style="" fill="#ECECFF" stroke-width="0" stroke="none" d="M-73.79999923706055 -54 L73.79999923706055 -54 L73.79999923706055 54 L-73.79999923706055 54"></path><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-73.79999923706055 -54 C-36.31348124582303 -54, 1.1730367454144925 -54, 73.79999923706055 -54 M-73.79999923706055 -54 C-27.262203428963574 -54, 19.2755923791334 -54, 73.79999923706055 -54 M73.79999923706055 -54 C73.79999923706055 -27.316698541323284, 73.79999923706055 -0.6333970826465674, 73.79999923706055 54 M73.79999923706055 -54 C73.79999923706055 -25.9303626625497, 73.79999923706055 2.139274674900598, 73.79999923706055 54 M73.79999923706055 54 C42.76866612898797 54, 11.737333020915386 54, -73.79999923706055 54 M73.79999923706055 54 C22.412876392527735 54, -28.974246452005076 54, -73.79999923706055 54 M-73.79999923706055 54 C-73.79999923706055 23.32131231943882, -73.79999923706055 -7.357375361122358, -73.79999923706055 -54 M-73.79999923706055 54 C-73.79999923706055 16.50809683782176, -73.79999923706055 -20.98380632435648, -73.79999923706055 -54"></path></g><g transform="translate(-41.17499923706055, -30)" class="annotation-group text"><g transform="translate(0,-12)" style="" class="label"><foreignObject height="24" width="82.3499984741211"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 127px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>«interface»</p></span></div></foreignObject></g></g><g transform="translate(-61.79999923706055, -6)" class="label-group text"><g transform="translate(0,-12)" style="font-weight: bolder" class="label"><foreignObject height="24" width="123.5999984741211"><div style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 167px; text-align: center;" xmlns="http://www.w3.org/1999/xhtml"><span style="" class="nodeLabel markdown-node-label"><p>IRequestHandler</p></span></div></foreignObject></g></g><g transform="translate(-61.79999923706055, 42)" class="members-group text"></g><g transform="translate(-61.79999923706055, 72)" class="methods-group text"></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-73.79999542236328 18 C-29.70305718894631 18, 14.39388104447066 18, 73.79999542236328 18 M-73.79999542236328 18 C-25.999113077233858 18, 21.801769267895565 18, 73.79999542236328 18"></path></g><g style="" class="divider"><path style="" fill="none" stroke-width="1.3" stroke="#9370DB" d="M-73.79999542236328 36 C-30.596451600477977 36, 12.607092221407328 36, 73.79999542236328 36 M-73.79999542236328 36 C-28.417263767024437 36, 16.965467888314407 36, 73.79999542236328 36"></path></g></g></g></g></g></svg>
+</div>
+
+<div id="plugin-contextmenu-container" class="selectNone"><ul id="plugin-contextmenu-d2f17a5f-a846-9db2-dac8-230c3b6d6e32" class="plugin-contextmenu" data-plugin-is-contextmenu="true" style="display: none;"><li class="menuitem disabled" tabindex="1" role="menuitem" id="Copy" data-plugin-contextmenu-item-type="command" aria-disabled="true"><img class="icon" style="visibility: hidden;"><div class="main">Copy</div></li><li class="menuitem" tabindex="2" role="menuitem" id="Save" data-plugin-contextmenu-item-type="command"><img class="icon" style="visibility: hidden;"><div class="main">Save As HTML... </div></li><li class="menuitem" tabindex="3" role="menuitem" id="Print" data-plugin-contextmenu-item-type="command"><img class="icon" style="visibility: hidden;"><div class="main">Print HTML...</div></li></ul></div></body>
