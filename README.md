@@ -1,72 +1,22 @@
 # SecureWebApi
 
-A simple ASP.NET Core Web API designed to demonstrate how to secure endpoints with OpenID Connect (OIDC) and JWT-based authentication.
+SecureWebApi is a modern ASP.NET Core sample API built to showcase secure endpoint protection with OpenID Connect (OIDC) and JWT-based authentication.
 
-## Overview
+## Why this project matters
 
-This repository is a lightweight learning/demo project for implementing authentication and authorization in a .NET API. It shows how to:
+This repository demonstrates a practical, developer-friendly approach to securing a .NET API with industry-standard authentication patterns. It is designed for learning, prototyping, and experimentation—ideal for teams and developers exploring how to protect APIs with identity-driven security.
 
-- configure JWT bearer authentication
-- validate issuer and audience claims
-- define authorization policies based on scopes
-- protect controller actions with `[Authorize]`
-- expose Swagger in development
-- use MediatR for a clean command/query pattern
-- work with EF Core-backed models and simple seeded data
+## What the project includes
 
-The project is intentionally small and focused on demonstrating secure API patterns rather than production-ready enterprise architecture.
+- JWT bearer authentication setup
+- Scope-based authorization policies
+- Protected API routes using `[Authorize]`
+- Swagger UI for local development and endpoint exploration
+- MediatR-driven application flow for cleaner command/query separation
+- EF Core-backed data access and seed initialization
+- Examples for testing endpoints using `.http` files
 
-## What this project contains
-
-The solution includes two main projects:
-
-- `MyMicroService` - ASP.NET Core Web API
-- `DataAccess` - shared MediatR, handlers, commands, services, and model logic
-
-## Architecture
-
-### API layer
-The API layer is built with ASP.NET Core and contains controllers for:
-
-- `ProductsController` - basic product CRUD endpoints
-- `ParkingLotController` - parking lot and vehicle lifecycle endpoints
-- `OrdersController` - order operations through MediatR
-- `WeatherForecastController` - default ASP.NET template example
-
-### Security layer
-The security configuration is implemented in:
-
-- `MyMicroService/Security/JwtAuthenticationService.cs`
-- `MyMicroService/Security/SecurityConstants.cs`
-
-It configures:
-
-- JWT bearer authentication
-- issuer and audience validation
-- authorization policies such as `EditPolicy` and `DeletePolicy`
-- scope-based checks such as `edit:products` and `delete:products`
-
-### Data access layer
-The `DataAccess` project uses MediatR and organizes logic into:
-
-- `Commands`
-- `Handlers`
-- `Models`
-- `Services`
-
-This keeps the API controllers thin and promotes separation of concerns.
-
-## Features
-
-- JWT/OIDC-style authentication setup
-- Role/scope-based authorization policies
-- Swagger UI enabled in development
-- CORS configuration for local frontend access
-- EF Core database contexts and startup data seeding
-- REST-style endpoints for products, parking, and orders
-- Example API calls via `.http` files
-
-## Project structure
+## Solution structure
 
 ```text
 SecureWebApi/
@@ -101,17 +51,28 @@ SecureWebApi/
 └── .github/
 ```
 
-## Prerequisites
+## High-level architecture
 
-- .NET 9 SDK
-- Access to a compatible authentication provider (for example, Auth0)
-- LocalDB or another configured database backend for development
+SecureWebApi follows a simple layered design:
+
+- API layer: ASP.NET Core controllers handle incoming HTTP requests
+- Security layer: authentication and scope-based authorization are configured centrally
+- Data layer: MediatR and EF Core help organize business logic and persistence cleanly
+
+This separation keeps the application easy to understand while demonstrating common .NET patterns used in secure API development.
+
+## Security model
+
+The sample includes policy-based authorization for scoped access control:
+
+- `EditPolicy` requires the `edit:products` scope
+- `DeletePolicy` requires the `delete:products` scope
+
+This gives a clear example of how JWT claims can be translated into real security decisions in an API.
 
 ## Configuration
 
-The application reads authentication and connection settings from `MyMicroService/appsettings.json`.
-
-Example configuration:
+Authentication and database settings are defined in `MyMicroService/appsettings.json`.
 
 ```json
 {
@@ -125,15 +86,17 @@ Example configuration:
 }
 ```
 
-Important notes:
+These values are intended for sample/local development and should be replaced with your own identity provider and environment configuration in production.
 
-- `Jwt:Issuer` should be replaced with your own identity provider URL
-- `Jwt:Audience` should match the API audience expected by your tokens
-- The sample is configured for local development and uses a local Auth0 issuer URL in the default config
+## Getting started
 
-## Running the application
+### Prerequisites
 
-From the repository root:
+- .NET 9 SDK
+- LocalDB or another compatible database backend
+- Access to a trusted identity provider such as Auth0
+
+### Run locally
 
 ```bash
 dotnet restore MyMicroservice.sln
@@ -141,13 +104,9 @@ dotnet build MyMicroservice.sln
 dotnet run --project MyMicroService
 ```
 
-Once running, Swagger should be available in development at:
+Swagger is enabled in development, making it easy to explore and test the API locally.
 
-```text
-https://localhost:PORT/swagger
-```
-
-## Example API endpoints
+## Example endpoints
 
 ### Products
 
@@ -158,8 +117,6 @@ POST /api/products
 PUT /api/products/{id}
 DELETE /api/products/{id}
 ```
-
-The `PUT` and `DELETE` actions are protected with authorization.
 
 ### Parking lot
 
@@ -181,27 +138,26 @@ PUT /api/orders/{id}
 DELETE /api/orders/{id}
 ```
 
-The repo includes ready-to-use request examples in:
+Sample request payloads are included in:
 
 - `OrdersApi.http`
 - `ParkingLot.http`
 
-## Security model
+## Why developers use this repo
 
-The sample defines two authorization policies:
+SecureWebApi is a compact, approachable example of a secure API built with ASP.NET Core. It combines authentication, authorization, service layering, and modern .NET patterns into a project that is easy to understand and easy to extend.
 
-- `EditPolicy` -> requires claim `scope=edit:products`
-- `DeletePolicy` -> requires claim `scope=delete:products`
+It is particularly useful for:
 
-This is a simple way to demonstrate scoped authorization in a JWT-based API.
+- learning OIDC/JWT security in .NET
+- testing authorization flows locally
+- exploring layered API design
+- building a base for a more production-ready secure service
 
-## Notes and limitations
+## Notes
 
-- This is a demo project intended for learning secure API development
-- Some configuration values are sample values and should be updated for real environments
-- CORS is configured for a local frontend origin and may need to be adjusted for your setup
-- The app is set up for local development; production hardening would include secret management, stronger validation, and environment-specific configuration
+This is a demonstration project, not a production security blueprint. It is designed to educate and accelerate understanding of secure API patterns in a .NET environment.
 
 ## Summary
 
-`SecureWebApi` is a practical example of how to secure an ASP.NET Core API using JWT/OIDC concepts, custom authorization policies, and a layered .NET architecture. It is a useful starting point for learning, experimenting, or extending secure API patterns in a .NET environment.
+SecureWebApi brings together authentication, authorization, and clean API design in one focused sample. It is a strong starting point for anyone looking to understand how secure ASP.NET Core services are structured in practice.
